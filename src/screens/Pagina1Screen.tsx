@@ -21,20 +21,30 @@ export const Pagina1Screen = ({navigation}: Props) => {
           onPress={ () =>navigation.navigate('PersonaScreen')}
          /> */}
 
-        <TouchableOpacity onPress={() => navigation.navigate('PersonaScreen',{
-          id:1,
-          nombre:'Pedro'
-        })}>
-          <Text style={styles.title}>Click --> Pedro</Text>
-        </TouchableOpacity>
+        <View style={{flexDirection:'row'}}>
+          <TouchableOpacity 
+            style={{...styles.botonGrande, //los 3 puntos, es desestructurar el objeto y agregarle en la linea de abajo un background-color
+            backgroundColor: '#5856D6' }} 
+            onPress={() => navigation.navigate('PersonaScreen',{
+              id:1,
+              nombre:'Pedro'
+              })
+            }>
+            <Text style={styles.botonGrandeTexto}>Pedro</Text>
+          </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={() => navigation.navigate('PersonaScreen',{
-          id:2,
-          nombre:'Maria'
-        })}>
-          <Text style={styles.title}>Click --> Maria</Text>
-        </TouchableOpacity>
+          <TouchableOpacity 
+            style={{...styles.botonGrande, //los 3 puntos, es desestructurar el objeto y agregarle en la linea de abajo un background-color
+            backgroundColor: '#FF9427' }} 
+            onPress={() => navigation.navigate('PersonaScreen',{
+              id:2,
+              nombre:'Maria'
+              })
+            }>
+            <Text style={styles.botonGrandeTexto}>Maria</Text>
+          </TouchableOpacity>
+        </View>
     </View>
   )
 }
