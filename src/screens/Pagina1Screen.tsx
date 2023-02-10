@@ -27,6 +27,14 @@ export const Pagina1Screen = ({navigation}: Props) => {
         })}>
           <Text style={styles.title}>Click --> Pedro</Text>
         </TouchableOpacity>
+
+
+        <TouchableOpacity onPress={() => navigation.navigate('PersonaScreen',{
+          id:2,
+          nombre:'Maria'
+        })}>
+          <Text style={styles.title}>Click --> Maria</Text>
+        </TouchableOpacity>
     </View>
   )
 }
