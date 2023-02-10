@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Button } from 'react-native';
 
 export const styles = StyleSheet.create({
     globalMargin:{
@@ -9,5 +9,5 @@ export const styles = StyleSheet.create({
         fontSize:30,
         marginBottom:10,
         fontWeight:'bold',
-    }
+    },
 })
