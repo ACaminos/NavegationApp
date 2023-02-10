@@ -21,7 +21,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
           onPress={ () =>navigation.navigate('PersonaScreen')}
          /> */}
 
-        <View style={{flexDirection:'row'}}>
+        <View style={{flexDirection:'row', justifyContent:'space-between'}}>
           <TouchableOpacity 
             style={{...styles.botonGrande, //los 3 puntos, es desestructurar el objeto y agregarle en la linea de abajo un background-color
             backgroundColor: '#5856D6' }} 
