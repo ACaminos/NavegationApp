@@ -8,5 +8,6 @@ export const styles = StyleSheet.create({
         color:'black',
         fontSize:30,
         marginBottom:10,
+        fontWeight:'bold',
     }
 })
