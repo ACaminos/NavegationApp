@@ -26,7 +26,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
           onPress={ () =>navigation.navigate('Pagina2Screen')}
         />
 
-        <Text style={styles.title}>Navegar con Argumentos</Text>
+        <Text style={{...styles.title, marginVertical:20}}>Navegar con Argumentos</Text>
 
         {/* <Button
           title='Ir a Persona'
