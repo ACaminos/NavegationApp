@@ -4,6 +4,7 @@ import { SettingScreen } from '../screens/SettingScreen';
 import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Tabs } from './Tabs';
 
 const Drawer = createDrawerNavigator();
 
@@ -13,7 +14,8 @@ export const MenuLateral = () => {
 
   return (
     <Drawer.Navigator drawerContent={ (props) => <MenuInterno {...props}/>}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      {/* <Drawer.Screen name="StackNavigator" component={StackNavigator} /> */}
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingScreen" component={SettingScreen} />
     </Drawer.Navigator>
   )
@@ -33,22 +35,22 @@ const MenuInterno = ({navigation} : DrawerContentComponentProps ) => {
 
       {/* Opciones de menu */}
       <View style={styles.menuContainer}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.menuBoton}
-          onPress={ () => navigation.navigate('StackNavigator')
+          onPress={ () => navigation.navigate('Tabs')
           }
           >
-          <Text style={styles.menuTexto}>Navegacion Stack</Text>
+          <Text style={styles.menuTexto}>Navegación</Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Text 
+          <Text
             style={styles.menuTexto}
             onPress={ () => navigation.navigate('SettingScreen')
             }
             >Ajustes</Text>
         </TouchableOpacity>
-        
+
       </View>
 
     </DrawerContentScrollView>
