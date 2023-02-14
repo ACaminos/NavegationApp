@@ -4,6 +4,7 @@ import { Tab1Sreen } from '../screens/Tab1Sreen';
 import { Tab2Sreen } from '../screens/Tab2Sreen';
 import { StackNavigator } from './StackNavigator';
 import { colores } from '../theme/appTheme';
+import { Text } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,9 +23,9 @@ export const Tabs = () => {
                 fontSize:15
             }
                 }}>
-      <Tab.Screen name="Tab1Screen" component={Tab1Sreen} />
-      <Tab.Screen name="Tab2Screen" component={Tab2Sreen} />
-      <Tab.Screen name="StackNavigator" component={StackNavigator} />
+      <Tab.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>T1</Text>}} component={Tab1Sreen} />
+      <Tab.Screen name="Tab2Screen" options={{title:'Tab 2'}} component={Tab2Sreen} />
+      <Tab.Screen name="StackNavigator" options={{title:'Tab 3'}} component={StackNavigator} />
 
     </Tab.Navigator>
   );
