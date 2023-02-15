@@ -10,14 +10,13 @@ interface Props extends DrawerScreenProps<any,any>{}
 
 export const Pagina1Screen = ({navigation}: Props) => {
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerLeft: () => <Button title='Menu' onPress={() => navigation.toggleDrawer()}/>
-    })
-  }, [])
-  
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerLeft: () => <Button title='Menu' onPress={() => navigation.toggleDrawer()}/>
+  //   })
+  // }, [])
 
-  
+
   return (
     <View style={styles.globalMargin}>
         <Text style={styles.title}>PaginaScreen 1</Text>
@@ -34,9 +33,9 @@ export const Pagina1Screen = ({navigation}: Props) => {
          /> */}
 
         <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-          <TouchableOpacity 
+          <TouchableOpacity
             style={{...styles.botonGrande, //los 3 puntos, es desestructurar el objeto y agregarle en la linea de abajo un background-color
-            backgroundColor: '#5856D6' }} 
+            backgroundColor: '#5856D6' }}
             onPress={() => navigation.navigate('PersonaScreen',{
               id:1,
               nombre:'Pedro'
@@ -46,9 +45,9 @@ export const Pagina1Screen = ({navigation}: Props) => {
           </TouchableOpacity>
 
 
-          <TouchableOpacity 
+          <TouchableOpacity
             style={{...styles.botonGrande, //los 3 puntos, es desestructurar el objeto y agregarle en la linea de abajo un background-color
-            backgroundColor: '#FF9427' }} 
+            backgroundColor: '#FF9427' }}
             onPress={() => navigation.navigate('PersonaScreen',{
               id:2,
               nombre:'Maria'
