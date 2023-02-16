@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from 'react-native-vector-icons/Ionicons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { ChatScreen } from '../screens/ChatScreen';
 import { ContactsScreen } from '../screens/ContactsScreen';
@@ -24,9 +25,29 @@ export const TopTabNavigator = () => {
         tabBarStyle:{shadowColor:'transparent', elevation:0,},
         }
         }>
-      <Tab.Screen name="ChatScreen" options={{title:'Chat Screen'}} component={ ChatScreen } />
-      <Tab.Screen name="ContactsScreen" options={{title:'Contact Screen'}} component={ ContactsScreen } />
-      <Tab.Screen name="AlbumsScreen" options={{title:'Album Screen'}} component={ AlbumsScreen } />
+      <Tab.Screen 
+        name="ChatScreen"
+        options={{
+          title:'Chat Screen',
+          tabBarIcon:()=>(<Icon name="chatbubble-ellipses" size={20} color={colores.primary} />)
+          }}
+        component={ ChatScreen } />
+
+      <Tab.Screen
+        name="ContactsScreen"
+        options={{
+          title:'Contact Screen',
+          tabBarIcon:()=>(<Icon name="people" size={20} color={colores.primary} />)
+          }}
+        component={ ContactsScreen } />
+
+      <Tab.Screen
+        name="AlbumsScreen"
+        options={{
+          title:'Album Screen',
+          tabBarIcon:()=>(<Icon name="book" size={20} color={colores.primary} />)
+          }}
+        component={ AlbumsScreen } />
     </Tab.Navigator>
   );
 }

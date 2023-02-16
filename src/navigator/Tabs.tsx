@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Tab1Sreen } from '../screens/Tab1Sreen';
@@ -19,9 +20,9 @@ const TabsAndroid = () => {
     <BottomTabAndroid.Navigator
       sceneAnimationEnabled={true}
       barStyle={{backgroundColor:colores.primary}} >
-      <BottomTabAndroid.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Tab 1</Text>}} component={Tab1Sreen} />
-      <BottomTabAndroid.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Tab 2</Text>}} component={TopTabNavigator} />
-      <BottomTabAndroid.Screen name="StackNavigator" options={{title:'Stack', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Stack</Text>}} component={StackNavigator} />
+      <BottomTabAndroid.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="footsteps" size={25} color="#900" /></Text>}} component={Tab1Sreen} />
+      <BottomTabAndroid.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="tv-outline" size={25} color="#900" /></Text>}} component={TopTabNavigator} />
+      <BottomTabAndroid.Screen name="StackNavigator" options={{title:'Stack', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="infinite" size={25} color="#900" /></Text>}} component={StackNavigator} />
     </BottomTabAndroid.Navigator>
   );
 }
@@ -46,9 +47,9 @@ export const TabsIos = () => {
                 }}
 
                 >
-      <BottomTabIos.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Tab 1</Text>}} component={Tab1Sreen} />
-      <BottomTabIos.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Tab 2</Text>}} component={TopTabNavigator} />
-      <BottomTabIos.Screen name="StackNavigator" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>Stack</Text>}} component={StackNavigator} />
+      <BottomTabIos.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="footsteps" size={20} color="#900" /></Text>}} component={Tab1Sreen} />
+      <BottomTabIos.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="tv-outline" size={20} color="#900" /></Text>}} component={TopTabNavigator} />
+      <BottomTabIos.Screen name="StackNavigator" options={{title:'Stack', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="infinite" size={20} color="#900" /></Text>}} component={StackNavigator} />
 
       {/* <BottomTabIos.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}>T1</Text>}} component={Tab1Sreen} /> */}
       {/* <BottomTabIos.Screen name="Tab2Screen" options={{title:'Tab 2'}} component={Tab2Sreen} /> */}

@@ -1,3 +1,4 @@
+import Icon from 'react-native-vector-icons/Ionicons';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
 import { StackNavigator } from './StackNavigator';
 import { SettingScreen } from '../screens/SettingScreen';
@@ -5,6 +6,7 @@ import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-
 import { styles } from '../theme/appTheme';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Tabs } from './Tabs';
+import {colores} from '../theme/appTheme'
 
 const Drawer = createDrawerNavigator();
 
@@ -40,10 +42,12 @@ const MenuInterno = ({navigation} : DrawerContentComponentProps ) => {
           onPress={ () => navigation.navigate('Tabs')
           }
           >
+          <Icon name="apps-outline" size={20} color={colores.primary}></Icon>
           <Text style={styles.menuTexto}>Navegación</Text>
         </TouchableOpacity>
 
         <TouchableOpacity>
+        <Icon name="settings-outline" size={20} color={colores.primary}></Icon>
           <Text
             style={styles.menuTexto}
             onPress={ () => navigation.navigate('SettingScreen')
