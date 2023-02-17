@@ -1,8 +1,9 @@
+import Icon from 'react-native-vector-icons/Ionicons';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import { StackScreenProps } from '@react-navigation/stack/lib/typescript/src/types';
 import React, { useEffect } from 'react'
 import { View, Text, Button, TouchableOpacity } from 'react-native';
-import { styles } from '../theme/appTheme';
+import { styles, colores } from '../theme/appTheme';
 
 // interface Props extends StackScreenProps<any,any>{}
 interface Props extends DrawerScreenProps<any,any>{}
@@ -41,6 +42,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
               nombre:'Pedro'
               })
             }>
+            <Icon name="man-outline" size={20} color={colores.secondary}></Icon>
             <Text style={styles.botonGrandeTexto}>Pedro</Text>
           </TouchableOpacity>
 
@@ -53,6 +55,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
               nombre:'Maria'
               })
             }>
+            <Icon name="woman-outline" size={20} color={colores.secondary}></Icon>
             <Text style={styles.botonGrandeTexto}>Maria</Text>
           </TouchableOpacity>
         </View>

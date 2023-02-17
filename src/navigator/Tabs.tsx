@@ -20,7 +20,7 @@ const TabsAndroid = () => {
     <BottomTabAndroid.Navigator
       sceneAnimationEnabled={true}
       barStyle={{backgroundColor:colores.primary}} >
-      <BottomTabAndroid.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="footsteps" size={25} color="#900" /></Text>}} component={Tab1Sreen} />
+      <BottomTabAndroid.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="aperture-outline" size={25} color="#900" /></Text>}} component={Tab1Sreen} />
       <BottomTabAndroid.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="tv-outline" size={25} color="#900" /></Text>}} component={TopTabNavigator} />
       <BottomTabAndroid.Screen name="StackNavigator" options={{title:'Stack', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="infinite" size={25} color="#900" /></Text>}} component={StackNavigator} />
     </BottomTabAndroid.Navigator>
@@ -47,7 +47,7 @@ export const TabsIos = () => {
                 }}
 
                 >
-      <BottomTabIos.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="footsteps" size={20} color="#900" /></Text>}} component={Tab1Sreen} />
+      <BottomTabIos.Screen name="Tab1Screen" options={{title:'Tab 1', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="aperture-outline" size={20} color="#900" /></Text>}} component={Tab1Sreen} />
       <BottomTabIos.Screen name="TopTabNavigator" options={{title:'TopTabNavigator', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="tv-outline" size={20} color="#900" /></Text>}} component={TopTabNavigator} />
       <BottomTabIos.Screen name="StackNavigator" options={{title:'Stack', tabBarIcon:(props)=> <Text style={{color:colores.primary}}><Icon name="infinite" size={20} color="#900" /></Text>}} component={StackNavigator} />
 
