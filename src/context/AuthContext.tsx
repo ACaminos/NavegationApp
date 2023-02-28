@@ -20,6 +20,8 @@ export interface AuthContextProps{
     authState: AuthState;
     signIn: () => void;
     changeFavoriteIcon: (iconName: string) => void;
+    logOut: () => void;
+    changeUsername: (username: string) => void;
 }
 
 
@@ -35,7 +37,15 @@ export  const AuthProvider = ({children}: any) => {
     }
 
     const changeFavoriteIcon = ( iconName:string) => {
-        dispatch( {type: 'changeFavIcon', payload: iconName})
+        dispatch( {type: 'changeFavIcon', payload: iconName}) // payload = informacion adicional que se le da a la accion
+    }
+
+    const logOut = () =>{
+        dispatch({type: 'logOut'})
+    }
+
+    const changeUsername = (username:string) => {
+        dispatch( {type: 'changeUsername', payload: username})
     }
 
 
@@ -43,7 +53,9 @@ export  const AuthProvider = ({children}: any) => {
         <AuthContext.Provider value={{
             authState,
             signIn,
-            changeFavoriteIcon
+            changeFavoriteIcon,
+            logOut,
+            changeUsername
         }}>
             {children}
 
