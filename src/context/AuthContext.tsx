@@ -1,4 +1,5 @@
-import React, {createContext} from 'react'
+import React, {createContext, useReducer} from 'react'
+import { authReducer } from './authReducer';
 
 //Define como luce ... Que informacion tendre
 export interface AuthState{
@@ -18,6 +19,7 @@ export const AuthInitialState: AuthState = {
 export interface AuthContextProps{
     authState: AuthState;
     signIn: () => void;
+    changeFavoriteIcon: (iconName: string) => void;
 }
 
 
@@ -26,10 +28,22 @@ export const AuthContext = createContext( {} as AuthContextProps)
 
 //Componente proveedor del estado
 export  const AuthProvider = ({children}: any) => {
+    const [authState, dispatch] = useReducer(authReducer, AuthInitialState)
+
+    const signIn = () =>{
+        dispatch({ type: 'signIn'})
+    }
+
+    const changeFavoriteIcon = ( iconName:string) => {
+        dispatch( {type: 'changeFavIcon', payload: iconName})
+    }
+
+
     return(
         <AuthContext.Provider value={{
-            authState: AuthInitialState,
-            signIn: () =>{}
+            authState,
+            signIn,
+            changeFavoriteIcon
         }}>
             {children}
 
